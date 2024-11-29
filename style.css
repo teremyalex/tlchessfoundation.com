@@ -1,0 +1,2312 @@
+body{
+    color: #0D0D0D;
+    font-size: 16px; 
+    font-family: Montserrat; 
+    margin: 0; 
+    overflow: auto;
+}
+.header{
+    background: url(sakk/header2.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    text-align: center;
+    padding: 0 0 60px;
+}
+.header > div{
+    max-width: 1024px;
+    margin:0 auto;
+    padding:0 10px;
+}
+a {
+    text-decoration: none;
+}
+nav{
+    max-width: 900px;
+    margin: 0 auto;
+}
+nav > ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0;
+    padding:20px 0;
+    color:white;
+    font-weight: 600;
+    list-style: none;
+}
+nav > ul li{
+    position: relative;
+}
+nav.menu ul ul{
+    position: absolute;
+    width: 150px;
+    background: white;
+    margin: 10px 0 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 600;
+    list-style: none;
+}
+nav.menu a{
+    display: block;
+    padding:10px 15px;
+    color:white;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+nav.menu ul ul a{
+    color:#282828;
+}
+nav.menu ul ul a:hover{
+    background: #ff0000;
+    color: white;
+}
+nav.menu li:nth-child(n+2) a:hover{
+    background: white;
+    color: #282828;
+}
+#sub-menu-partner, 
+#sub-menu-rolunk, 
+#sub-menu-nyelv,
+#sub-menu-sakk{
+    display: none;
+    z-index: 1;
+}
+nav.mobil-menu{
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+nav.mobil-menu .menu-gomb {
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+nav.mobil-menu .menu-gomb i{
+    cursor: pointer;
+    font-size: 30px;
+    padding: 10px 15px;
+}
+nav.mobil-menu .menu-list {
+    display: none;
+    background: #000000;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 100%;
+    padding: 70px 0 0 50px;
+    transition: 200ms ease-in-out;
+}
+nav.mobil-menu .menu-list.aktiv {
+    left: 0%;
+    display: block;
+}
+nav.mobil-menu ul ul{
+    position: relative;
+    padding: 0 0 0 25px;
+    font-size: 13px;
+    font-weight: 400;
+    list-style: none;
+}
+nav.mobil-menu ul ul:before {
+    content: "";
+    width: 1px;
+    background: #777;
+    position: absolute;
+    left: 27px;
+    top: 17px;
+    bottom: 17px;
+}
+nav.mobil-menu a{
+    display: block;
+    padding:10px 15px;
+    color:white;
+}
+nav.mobil-menu ul ul a{
+    color:#ddd;
+}
+nav.mobil-menu .menu-list ul li:before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    top: 16px;
+    border-radius: 50px;
+    position: absolute;
+    background: #777;
+}
+nav.mobil-menu .contact {
+    background: transparent;
+}
+.logo{
+    width:100px;
+}
+.logo:hover{
+    background: transparent;
+}
+.logo img{
+    max-width: 100%;
+}
+.contact{
+    background: #FF0000;
+}
+.header h1{
+    font-size: 90px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+    margin: 100px 0 0;
+}
+.header h2{
+    font-size: 46px;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+}
+.header p{
+    font-size: 16px;
+    font-weight: 200;
+    color: white;
+    margin: 0;
+}
+.cta{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+    margin: 30px 0;
+    padding:20px 30px;
+    background: #FF0000;
+    color:white;
+    transition: 200ms ease-in-out;
+}
+.cta:hover{
+    background: white;
+    color:#282828;
+    cursor: pointer;
+}
+.reverse.cta:hover{
+    background: #111;
+    color:white;
+}
+
+#partnerek{
+    padding: 30px 0;
+    text-align: center;
+}
+#partnerek h2{
+    font-size: 70px;
+    font-weight: 800;
+    margin-top:0;
+}
+#partnerek h3{
+    font-size: 30px;
+    font-weight: 600;
+}
+#partnerek > div {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+#partnerek div > div{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#partnerek img{
+    display: block;
+    max-width: 19%;
+    padding: 0 3%;
+    opacity: 0.8;
+    filter: saturate(0) brightness(0);
+}
+
+#ad{
+    text-align: center;
+    background: #111;
+    color:white;
+    padding: 50px 0;
+}
+#ad h2{
+    font-size: 70px;
+    font-weight: 800;
+    margin-top:0;
+}
+#ad > div{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding:0 10px;
+}
+#ad .ads{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#ad .ads div {
+    width: 30%;
+    background: white;
+    color: #282828;
+    padding: 15px 20px;
+    margin: 0 0 10px;
+    box-sizing: border-box;
+}
+#ad h4 {
+    font-size: 24px;
+    margin: 10px;
+}
+#ad ul {
+    text-align: left;
+    list-style-image: url('sakk/check.png');
+}
+#ad li{
+    font-size: 18px;
+    margin: 7px 0;
+}
+
+#stat{
+    text-align: center;
+    padding:50px 0;
+}
+#stat > div {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#stat > div > div {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 50%;
+}
+.stat-number-yt{
+    font-size: 100px;
+    font-weight: 200;
+    background: linear-gradient(#ffd400, #ff0000);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.stat-number-ig{
+    font-size: 100px;
+    font-weight: 200;
+    background: linear-gradient(#00e7ff, #ff00f5);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.stat-text {
+    font-size: 20px;
+    font-style: italic;
+}
+
+
+#videok{
+    background: #111;
+    text-align: center;
+    padding: 60px 0;
+    color:white;
+}
+#videok h2{
+    font-size: 70px;
+    font-weight: 800;
+    margin-top:0;
+}
+#videok .live {
+    max-width: 1024px;
+    margin: 0 auto 50px;
+    box-shadow: 0 0 100px rgb(255 255 255 / 12%);
+    border-bottom: 4px solid #ff0000;
+}
+.video-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 0 25px;
+    box-sizing: border-box;
+    height: 70px;
+}
+.video-head svg{
+    width:100px;
+}
+.video-head img {
+    width: 170px;
+}
+.video-block{
+    display: flex;
+
+}
+.video-related{
+    width: 20%;
+    padding:15px;
+    box-sizing: border-box;
+}
+.video-related img{
+    width: 100%;
+}
+.video-related img:hover {
+    cursor: pointer;
+}
+.video-iframe{
+    width: 80%;
+    padding: 15px 15px 0 0;
+    box-sizing: border-box;
+}
+.video-iframe iframe{
+    display: none;
+    width: 100%;
+    aspect-ratio:16/9.05;
+}
+.giganet-stat {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.giganet-stat div {
+    font-size: 70px;
+    font-weight: 200;
+    line-height: 0.6;
+}
+.giganet-stat div span {
+    font-size: 24px;
+    font-weight: 200;
+    font-style: italic;
+}
+.giganet-stat svg {
+    width: 50px;
+    display: block;
+    fill: white;
+    margin: 0 auto;
+}
+.giganet-stat p {
+    margin: 30px 0;
+}
+
+#fotok,
+#fotok2{
+    padding: 50px 0;
+    text-align: center;
+}
+#fotok h2,
+#fotok2 h2{
+    font-size: 70px;
+    font-weight: 800;
+    margin-top:0;
+}
+#fotok h3,
+#fotok2 h3{
+    font-size: 30px;
+    font-weight: 600;
+}
+#fotok > div, 
+#fotok2 > div {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#fotok div div, 
+#fotok2 div div {
+    width: 25%;
+}
+#fotok img, 
+#fotok2 img {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#fotok img:hover,
+#fotok2 img:hover{
+    cursor: pointer;
+}
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: flex;
+}
+
+#overlay img {
+    max-width: 95%;
+    max-height: 95%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    animation: zoomIn 0.25s ease;
+    }
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.75);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#csapat{
+    text-align: center;
+    padding:50px 0;
+}
+#csapat h2{
+    font-size: 70px;
+    font-weight: 800;
+    margin-top:0;
+}
+#csapat > div{
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#csapat div div{
+    width: 16%;
+}
+#csapat img{
+    width:100%;
+    display: block;
+    border-radius: 50%;
+}
+#csapat p{
+    font-size: 18px;
+    font-weight: 600;
+}
+#csapat span{
+    font-size: 13px;
+    font-weight: 300;
+}
+.kuldetes p {
+    font-size: 26px !important;
+    font-weight: 300 !important;
+    line-height: 1.4;
+    text-align: justify;
+    margin: 0 0 20px;
+    padding:0 35px;
+    font-style: italic;
+}
+#csapat svg{
+   width:30px;
+}
+#calendar{
+    text-align: center;
+    padding:50px 0;
+    background: #111;
+    color:white;
+}
+#calendar h2{
+    font-size: 70px;
+    font-weight: 800;
+    margin-top:0;
+}
+#calendar > div{
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#calendar div div{
+    background: white;
+    width: 23%;
+    color:#282828;
+    padding: 20px;
+    margin: 0 0 10px;
+    box-sizing: border-box;
+}
+#calendar h4{
+    font-size: 28px;
+    font-weight: 800;
+}
+#calendar p{
+    text-align: left;
+}
+
+#contact {
+    background: #111;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+#contact div{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+#contact h2{
+    font-size: 70px;
+    font-weight: 800;
+    margin-top:100px;
+}
+#contact p{
+    font-size: 16px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 50px;
+}
+.social a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    box-sizing: border-box;
+    background: white;
+    justify-content: center;
+    margin: 0 10px;
+    border-radius: 50%;
+}
+.social svg {
+    fill: #282828;
+}
+
+
+/* STATISZTIKA */
+.detail-stat{
+    padding: 0 10px 100px;
+}
+.detail-stat h3{
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 0;
+}
+.detail-stat p{
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 10px 0;
+}
+.nev{
+    width: 150px; 
+    font-size: 22px;
+}
+.csik{
+    align-self: center; 
+    height: 20px; 
+    border-radius: 50px; 
+}
+.ertek{
+    margin-left: -50px; 
+    color: white;
+    align-self: center; 
+    font-style: italic;
+}
+.tech-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tech-flex > div{
+    width: 32%;
+}
+.tech-flex .nev{
+    width: 120px;
+    font-size: 18px;
+}
+.yt-subs .ertek{
+    margin-left: -70px; 
+}
+.yt-subs .nev{
+    width: 120px;
+    font-size: 18px;
+}
+
+/* RÓLUNK */
+.story{
+    background: #111;
+    padding: 60px 0;
+    color:white;
+    text-align: center;
+}
+.story h2{
+    font-size: 70px;
+    font-weight: 800;
+    margin-top:0;
+}
+.story p {
+    font-size: 26px !important;
+    font-weight: 300 !important;
+    line-height: 1.4;
+    text-align: justify;
+    margin: 0 0 20px;
+    padding:0 35px;
+    font-style: italic;
+    border-left: 60px solid;
+}
+.story svg{
+    fill:white;
+    width:30px;
+}
+.mukodes{
+    padding: 60px 0;
+    text-align: center;
+}
+.mukodes h2{
+    font-size: 70px;
+    font-weight: 800;
+    margin-top:0;
+}
+.mukodes p {
+    font-size: 26px !important;
+    font-weight: 300 !important;
+    line-height: 1.4;
+    text-align: justify;
+    margin: 0 0 20px;
+    padding:0 35px;
+    font-style: italic;
+    border-right: 60px solid;
+}
+.mukodes svg{
+    width:30px;
+}
+.mukodes img{
+    border-radius: 50%;
+    width: 200px;
+    margin: 10px;
+}
+
+/* HIRDETÉSI MEGOLDÁSOK */
+.feluletek{
+    padding: 50px 0;
+}
+.feluletek h2{
+    font-size: 70px;
+    font-weight: 800;
+    margin-top:0;
+    text-align: center;
+}
+.feluletek > div{
+    max-width: 1024px;
+    margin:0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.feluletek div div,
+.feluletek img{
+    width: 47%;
+    display: block;
+    align-self: center;
+    font-size: 20px !important;
+    font-weight: 300 !important;
+    text-align: justify;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+/* SAKK OLDALAK */
+.chesscom{
+    background: #322e2b;
+    padding: 20px 0;
+}
+.chesscom h2{
+    font-size: 40px;
+}
+.chesscom > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1024px;
+    margin: 0 auto;
+    align-items: center;
+}
+.chesscom img{
+    width: 40%;
+    display: block;
+}
+.chesscom div div{
+    width: 60%; 
+    padding:20px; 
+    box-sizing: border-box;  
+    color:white;
+}
+.chesscom p{
+    margin: 0 0 30px;
+}
+.chesscom a{
+    background: #7ea650;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    border-bottom: 4px solid #5e8741;
+    border-top: 2px solid #99b576;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: 120ms ease-in-out;
+}
+.chesscom a:hover{
+    background: #88b74e;
+}
+.lichess{
+    background: #edebe9;
+    padding: 20px 0;
+}
+.lichess h2{
+    font-size: 40px;
+}
+.lichess > div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: center;
+    max-width: 1024px;
+    margin: 0 auto;
+    align-items: center;
+}
+.lichess img{
+    width: 40%;
+    display: block;
+}
+.lichess div div{
+    width: 60%; 
+    padding:20px; 
+    box-sizing: border-box;  
+    color:#787878;
+}
+.lichess p{
+    margin: 0 0 30px;
+}
+.lichess a{
+    background: #edebe9;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: #4d4d4d;
+    font-size: 26px;
+    font-weight: 400;
+    border-bottom: 4px solid #d7d7d7;
+    border-top: 2px solid #f1f1f1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+    text-shadow: 0 1px 0 white;
+    transition: 120ms ease-in-out;
+}
+.lichess a:hover{
+    background: #f0f0f0;
+}
+.nyhchess-yt{
+    background: #322e2b;
+    padding: 20px 0;
+}
+.nyhchess-yt h2{
+    font-size: 40px;
+}
+.nyhchess-yt > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1024px;
+    margin: 0 auto;
+    align-items: center;
+}
+.nyhchess-yt img,
+.nyhchess-yt iframe{
+    width: 40%;
+    display: block;
+}
+.nyhchess-yt div div{
+    width: 60%; 
+    padding:20px; 
+    box-sizing: border-box;  
+    color:white;
+}
+.nyhchess-yt p{
+    margin: 0 0 30px;
+}
+.nyhchess-yt a{
+    background: #ff0000;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    border-bottom: 4px solid #a70000;
+    border-top: 2px solid #ff4040;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: 100ms ease-in-out;
+}
+.nyhchess-yt a:hover{
+    background: #ff4141;
+}
+.edzok-filter{
+    background: #efefef;
+    padding: 100px 0 0;
+}
+.edzok-filter div{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.edzok-filter label {
+    display: inline-block;
+    background: #b6bcbc;
+    color: white;
+    padding: 12px 24px;
+    font-size: 14px;
+    border-radius: 50px 50px 7px;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 0 16px 30px rgb(182 188 188 / 50%);
+    transition: 150ms ease-in-out;
+}
+.edzok-filter label:hover {
+    box-shadow: 0 11px 15px rgb(182 188 188 / 70%);
+    transform: translateY(2px) scale(0.98);
+}
+.edzok-filter label:has(> input:checked) {
+    background: #487073;
+    box-shadow: 0 16px 30px rgba(72, 112, 115, 0.5);
+}
+.edzok-filter label:has(> input:checked):hover {
+    box-shadow: 0 11px 15px rgba(72, 112, 115, 0.7);
+}
+.edzok-filter input{
+    display: none;
+}
+.edzok{
+    padding: 130px 0 0;
+    background: #efefef;
+}
+.edzok > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    align-items: flex-start;
+    max-width: 1024px; 
+    margin: 0 auto;
+}
+.edzok-card{
+    background: white;
+    width: 45%; 
+    border-radius: 50px; 
+    margin: 0 0 120px;
+    padding:30px; 
+    box-sizing: border-box; 
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15); 
+    position: relative;
+}
+.edzok-profil{
+    position: absolute; 
+    left:20px; 
+    top:-100px; 
+    width:200px; 
+    border-radius: 50%; 
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+}
+.edzok-rovid{
+    width: 50%; 
+    height: 100px;
+    margin: 0 0 0 auto;
+}
+.edzok-name{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.edzok-name span{
+    font-size: 14px; 
+    color:#D30003;
+}
+.fide {
+    margin: 0 0 30px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #999;
+}
+.edzok-gomb{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+.edzok-gomb a,
+.close{
+    display: inline-block;
+    background: #487073;
+    color: white;
+    padding: 12px 24px;
+    font-size: 26px;
+    border-radius: 50px 50px 7px;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+    box-shadow: 0 16px 30px rgba(72, 112, 115, 0.5);
+    transition: 70ms ease-in-out;
+}
+.edzok-gomb a:hover,
+.close:hover{
+    transform: translateY(2px) scale(0.98);
+    box-shadow: 0 11px 15px rgba(72, 112, 115, 0.7);
+}
+.email {
+    position: absolute;
+    bottom: 15px;
+    left: 188px;
+    background: #487073;
+    color: white;
+    padding: 12px 24px;
+    font-size: 14px;
+    border-radius: 7px 50px 50px;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+    box-shadow: 0 16px 30px rgba(72, 112, 115, 0.5);
+    opacity: 0;
+    transition: 200ms ease-in-out;
+}
+.close {
+    margin: 0 0 0 auto;
+    display: block;
+    width: 25px;
+    text-align: center;
+}
+.edzok-ar{
+    font-size: 18px; 
+    font-weight: 700;
+    max-width: 170px;
+}
+.edzok-hosszu{
+    margin: 0 0 35px;
+}
+.inaktiv{
+    display: none;
+}
+#overlay .edzok-card{
+    background: white;
+    width: 65%;
+    margin:0 auto;
+    border-radius: 50px; 
+    margin-top: 75px;
+    padding:30px; 
+    box-sizing: border-box; 
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15); 
+    position: relative;
+}
+#overlay .edzok-name{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 40px 0 10px;
+}
+#overlay .email {
+    left: 105px;
+}
+.close-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* TÁMOGATÁS */
+#tamogatas{
+    padding: 30px 10px;
+}
+#tamogatas h2{
+    font-size: 70px;
+    font-weight: 800;
+    margin-top:0;
+    text-align: center;
+}
+#tamogatas p {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin: 0 0 20px;
+    font-style: italic;
+}
+
+/* RANGLISTA */
+.ranglista{
+    padding: 100px 0;
+    background: #efefef;
+}
+.ranglista > div{
+    max-width: 800px; 
+    margin: 0 auto;
+}
+.vilagbajnok-h1{
+    font-size: 77px;
+}
+.ranglista table{
+    width: 100%;
+    border-spacing:0;
+}
+.ranglista thead tr{
+    background: #111;
+    color: white;
+}
+.ranglista tr{
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    margin:5px 0;
+    padding:10px;
+    transition: 150ms ease-in-out;
+}
+.ranglista td:nth-child(1),
+.ranglista th:nth-child(1){
+    width: 5%;
+    text-align: left;
+}
+.ranglista td:nth-child(2),
+.ranglista th:nth-child(2){
+    width: 7%;
+    text-align: left;
+}
+.ranglista td:nth-child(3),
+.ranglista th:nth-child(3){
+    width: 48%;
+    text-align: left;
+}
+.ranglista td:nth-child(4),
+.ranglista th:nth-child(4){
+    width:10%;
+    text-align: center;
+}
+.ranglista td:nth-child(5),
+.ranglista th:nth-child(5){
+    width: 15%;
+    text-align: center;
+}
+.ranglista td:nth-child(6),
+.ranglista th:nth-child(6){
+    width: 15%;
+    text-align: center;
+}
+.ranglista #topfederationopen td:nth-child(1),
+.ranglista #topfederationopen th:nth-child(1),
+.ranglista #topfederationwomen td:nth-child(1),
+.ranglista #topfederationwomen th:nth-child(1){
+    width: 5%;
+    text-align: left;
+}
+.ranglista #topfederationopen td:nth-child(2),
+.ranglista #topfederationopen th:nth-child(2),
+.ranglista #topfederationwomen td:nth-child(2),
+.ranglista #topfederationwomen th:nth-child(2){
+    width: 75%;
+    text-align: left;
+}
+.ranglista #topfederationopen td:nth-child(3),
+.ranglista #topfederationopen th:nth-child(3),
+.ranglista #topfederationwomen td:nth-child(3),
+.ranglista #topfederationwomen th:nth-child(3){
+    width: 20%;
+    text-align: center;
+}
+.ranglista img {
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
+    vertical-align: bottom;
+    height: 20px;
+}
+.ranglista tbody tr:hover{
+    background: #111;
+    color:white;
+    box-shadow: 0 0 30px rgba(40, 40, 40, 0.5);
+}
+.top-buttons{
+    display: flex;
+    justify-content: center;
+    margin:0 0 20px;
+}
+.top-buttons div{
+    background: #b6bcbc;
+    color: white;
+    border-radius: 10px;
+    margin:5px;
+    padding:10px;
+    text-align: center;
+    box-shadow: 0 16px 30px rgba(182,188,188,0.5);
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+}
+.top-buttons div.active{
+    display: block;
+    background: #111;
+    margin:5px;
+    box-shadow: 0 16px 30px rgba(40, 40, 40, 0.5);
+}
+.top-buttons div:hover{
+    box-shadow: 0 11px 15px rgba(182,188,188,0.7);
+    transform: translateY(2px) scale(0.98);
+}
+.top-buttons div.active:hover{
+    box-shadow: 0 11px 15px rgba(40, 40, 40, 0.7);
+}
+#top100women,
+#top100juniors,
+#top100girls,
+#top100magyarferfi,
+#top100magyarno,
+#top100magyarfiu,
+#top100magyarlany,
+#topfederationopen,
+#topfederationwomen,
+.wwc{
+    display: none;
+}
+
+.ranglista .wc th:nth-child(1),
+.ranglista .wwc th:nth-child(1),
+.ranglista .wc td:nth-child(1),
+.ranglista .wwc td:nth-child(1){
+    width: 10%;
+    text-align: left;
+}
+.ranglista .wc th:nth-child(n+2),
+.ranglista .wc td:nth-child(n+2),
+.ranglista .wwc th:nth-child(n+2),
+.ranglista .wwc td:nth-child(n+2){
+    width: 30%;
+    text-align: left;
+}
+.ranglista svg {
+    fill: white;
+    width: 13px;
+    margin: 0 auto;
+}
+
+/* FIDE ÉLŐ KALKULÁTOR */
+.kalkulator-choose{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    max-width: 340px;
+    margin: 35px auto 0;
+    color: white;
+    text-align: center;
+}
+.fide-elo.kalkulator-choose .performance-button{
+    height: 55px;
+    width: 140px;
+    background: rgb(0 0 0 / 78%);
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 0 0 0 0;
+    padding: 12px;
+    box-sizing: border-box;	
+}
+.fide-elo.kalkulator-choose .fide-norm-button{
+    height: 55px;
+    width: 170px;
+    background: rgb(0 0 0 / 78%);
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 5px 0 0 0;
+    padding: 12px;
+    box-sizing: border-box;	
+}
+.fide-elo.kalkulator-choose .fide-button{
+    background: rgb(17 17 17 / 78%);
+    font-weight: 600;
+    border-radius: 5px 5px 0 0;
+    padding: 15px 10px;
+    box-sizing: border-box;
+}
+.fide-elo.kalkulator-choose .performance-button a,
+.fide-elo.kalkulator-choose .fide-norm-button a{
+    color: #515151;
+}
+.fide-elo.kalkulator-choose .fide-button a{
+    color: #c9c9c9;
+}
+#kalkulator {
+    background: rgb(17 17 17 / 78%);
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    max-width: 740px;
+    margin: 0 auto 35px;
+    text-align: left;
+}
+#kalkulator form{
+    
+    position: relative;
+}
+#kalkulator form > div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+#elo-csere{
+	display: none;
+    vertical-align: super;
+    background: rgb(44, 44, 44);
+	width: 16%;
+    height: 40px;
+    margin: 1px 0 0;
+	padding: 0;
+    color: rgb(102, 102, 102);
+    border: 0px;
+    font-size: 24px;
+    cursor: pointer;
+}
+#eloForm > div:first-child > div{
+    width: 49.5%;
+    height: 86px;
+    background: #222;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 0 5px 0;
+}
+#eloForm > div label {
+    display: block;
+    font-size: 14px;
+    opacity: 0.6;
+    margin: 0 0 7px;
+}
+#eloForm #myElo input{
+    width: 82%;
+}
+#eloForm > div input{
+    width: 105px;
+    height: 40px;
+    background: transparent;
+    color: #ddd;
+    border: 0;
+    font-size: 38px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+}
+#eloForm > div input:focus-visible {
+    outline: 0;
+}
+#eloForm .side-result {
+    color: red;
+    font-size: 20px;
+    font-weight: 700;
+}
+#eloForm > #kFactorButtons label,
+#eloForm > .resultButtons label,
+.szamol label{
+    display: block;
+    font-size: 14px;
+    opacity: 0.6;
+    margin: 0 0 7px;
+}
+#eloForm #kFactorButtons button,
+#eloForm .resultButtons button{
+    width: 32%;
+    background: #2c2c2c;
+    color: #666666;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+}
+#eloForm #kFactorButtons button.active,
+#eloForm .resultButtons button.active{
+    background: red;
+    color: white;
+}
+#eloForm i {
+    cursor: pointer;
+}
+#kalkulator .alert {
+    display: flex;
+    align-items: center;
+    color: red;
+    align-self: center;
+}
+#kalkulator .alert i {
+    font-size: 26px;
+    margin: 0 10px;
+    vertical-align: sub;
+}
+#kalkulator #inputContainers div.active {
+    box-shadow: 0 0 5px 1px red;
+    transition: 150ms ease-in-out;
+}
+#oppContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #222;
+    border-radius: 5px;
+    margin: 0 0 5px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+}
+.plus-opp button {
+    display: block;
+    background: #2c2c2c;
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#kalkulator .szamol{
+    width: 100% !important;
+    background: #222;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+#kalkulator .szamol #result{
+    display: inline-block;
+    width: 79%;
+    height: 37px;
+    color: #ddd;
+    font-size: 38px;
+    font-weight: 700;
+}
+#kalkulator .szamol button {
+    width: 20%;
+    background: red;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    margin: 0;
+    padding: 10px;
+    vertical-align: text-bottom;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+}
+#kalkulator .szamol span {
+    color: red;
+    font-size: 20px;
+}
+.help {
+    display: none;
+    width: 100% !important;
+    background-color: #111111;
+    font-size: 14px;
+    border-radius: 5px;
+    color: #999;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#utmutato {
+    background: red;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+#utmutato-text {
+    display: none;
+    max-width: 600px;
+    margin: 20px auto 0;
+    text-align: left;
+    color: white;
+    background: rgb(17 17 17 / 78%);
+    border-radius: 5px;
+    padding: 40px;
+    box-sizing: border-box;
+    color: #999;
+}
+#utmutato-text.active{
+    display: block;
+}
+#utmutato-text h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+#utmutato-text p {
+    color: #999;
+    font-weight: 400;
+}
+#utmutato-text li {
+    margin: 10px 0;
+}
+#utmutato-text .elo-csere {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(44, 44, 44);
+    width: 55px;
+    height: 40px;
+    margin: 0 0 5px;
+    color: rgb(102, 102, 102);
+    font-size: 24px;
+}
+#fide-graph h3 {
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+    margin: 60px 0 0;
+}
+#fide-graph .x-axis {
+    color: white;
+    font-size: 13px;
+    color: #777;
+    display: flex;
+    justify-content: space-between;
+}
+/* PERFORMANCE KALKULÁTOR */
+.performance.kalkulator-choose{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    max-width: 340px;
+    margin: 35px auto 0;
+    color: white;
+    text-align: center;
+}
+.performance.kalkulator-choose .fide-norm-button{
+    height: 55px;
+    width: 160px;
+    background: rgb(0 0 0 / 78%);
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 5px 0 0 0;
+    padding: 12px;
+    box-sizing: border-box;	
+}
+.performance.kalkulator-choose .performance-button{
+    background: rgb(17 17 17 / 78%);
+    font-weight: 600;
+    border-radius: 5px 5px 0 0;
+    padding: 15px 10px;
+    box-sizing: border-box;	
+}
+.performance.kalkulator-choose .fide-button{
+    height: 55px;
+    width: 140px;
+    background: rgb(0 0 0 / 78%);
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 0 5px 0 0;
+    padding: 12px;
+    box-sizing: border-box;
+}
+.performance.kalkulator-choose .performance-button a{
+    color: #c9c9c9;
+}
+.performance.kalkulator-choose .fide-button a,
+.performance.kalkulator-choose .fide-norm-button a{
+    color: #515151;
+}
+#performance-kalkulator{
+    background: rgb(17 17 17 / 78%);
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+    max-width: 500px;
+    margin: 0 auto 35px;
+    text-align: left;
+}
+#performance-kalkulator h3 {
+    font-size: 18px;
+    opacity: 0.8;
+    margin: 15px 0 0;
+}
+#performance-kalkulator p {
+    margin: 0 0 15px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+#performance-kalkulator form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+#performance-kalkulator .elo-input{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#performance-kalkulator .elo-input div{
+    width: 33%;
+    height: 86px;
+    background: #222;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 0 5px 0;
+}
+#performance-kalkulator .elo-input div label {
+    display: block;
+    font-size: 14px;
+    opacity: 0.6;
+    margin: 0 0 7px;
+}
+#performance-kalkulator .elo-input div input{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    color: #ddd;
+    border: 0;
+    font-size: 38px;
+    font-weight: 700;
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+}
+#performance-kalkulator .elo-input div input:focus-visible {
+    outline: 0;
+}
+.plus-round,
+.plus-opp{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.plus-round button {
+    display: block;
+    background: #2c2c2c;
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px 5px 10px auto;
+}
+#performance-kalkulator .szamol{
+    width: 100% !important;
+    background: #222;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 10px 0 0;
+}
+#performance-kalkulator .szamol #result{
+    display: inline-block;
+    color:white;
+    width: 78%;
+    font-size: 38px;
+    font-weight: 700;
+}
+#performance-kalkulator .szamol button {
+    background: red;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+}
+
+/* PERFORMANCE KALKULÁTOR */
+.fide-norm.kalkulator-choose{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    max-width: 340px;
+    margin: 35px auto 0;
+    color: white;
+    text-align: center;
+}
+.fide-norm.kalkulator-choose .performance-button{
+    height: 55px;
+    width: 140px;
+    background: rgb(0 0 0 / 78%);
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 0 0 0 0;
+    padding: 12px;
+    box-sizing: border-box;	
+}
+.fide-norm.kalkulator-choose .fide-norm-button{
+    background: rgb(17 17 17 / 78%);
+    font-weight: 600;
+    border-radius: 5px 5px 0 0;
+    padding: 15px 10px;
+    box-sizing: border-box;	
+}
+.fide-norm.kalkulator-choose .fide-button{
+    height: 55px;
+    width: 140px;
+    background: rgb(0 0 0 / 78%);
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 0 5px 0 0;
+    padding: 12px;
+    box-sizing: border-box;
+}
+.fide-norm.kalkulator-choose .fide-norm-button a{
+    color: #c9c9c9;
+}
+.fide-norm.kalkulator-choose .fide-button a,
+.fide-norm.kalkulator-choose .performance-button a{
+    color: #515151;
+}
+#norm-kalkulator{
+    background: rgb(17 17 17 / 78%);
+    border-radius: 5px;
+    padding: 20px;
+    color: #ddd;
+    max-width: 700px;
+    margin: 0 auto 35px;
+    text-align: left;
+}
+#norm-kalkulator .round-button{
+    background: #222;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 0 5px 0;
+}
+#norm-kalkulator .round-button button{
+    width: 24.5%;
+    background: red;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+}
+#norm-kalkulator .norm-button #normTypeButtons{
+    background: #222;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 0 5px 0;
+}
+#norm-kalkulator .norm-button #normTypeButtons label,
+#norm-kalkulator .pont-fed label,
+#norm-kalkulator .round-button label,
+#norm-kalkulator .players label,
+#norm-kalkulator .norm-button #resultButtons label,
+#norm-kalkulator .error label,
+#norm-kalkulator .Rp label,
+#norm-kalkulator .Ra label,
+#norm-kalkulator .szamol label{
+    display: block;
+    font-size: 14px;
+    opacity: 0.6;
+    margin: 0 0 7px;
+}
+#norm-kalkulator .norm-button button{
+    width: 24.5%;
+    background: #2c2c2c;
+    color: #666666;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+}
+#norm-kalkulator .norm-button button.active{
+    background: red;
+    color: white;
+}
+#norm-kalkulator .pont-fed{
+    display: flex;
+    justify-content: space-between;
+}
+#norm-kalkulator .pont,
+#norm-kalkulator .sajat-fed{
+    background: #222;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 0 5px 0;
+    width:49.5%;
+}
+#norm-kalkulator .pont input,
+#norm-kalkulator #opponents input{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    color: #ddd;
+    border: 0;
+    font-size: 38px;
+    font-weight: 700;
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+}
+#norm-kalkulator .pont input:focus-visible,
+#norm-kalkulator .sajat-fed select:focus-visible,
+#norm-kalkulator #opponents input:focus-visible,
+#norm-kalkulator #opponents select:focus-visible{
+    outline: 0;
+}
+#norm-kalkulator .sajat-fed select,
+#norm-kalkulator #opponents select{
+    width: 100%;
+    height: 40px;
+    background: #222;
+    color: #ddd;
+    border: 0;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+}
+#norm-kalkulator #opponents > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#norm-kalkulator #opponents > div div {
+    background: #222;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 0 5px 0;
+}
+#norm-kalkulator #opponents > div div:nth-child(1) {
+    width: 21.5%;
+}
+#norm-kalkulator #opponents > div div:nth-child(2) {
+    width: 19.5%;
+}
+#norm-kalkulator #opponents > div div:nth-child(3) {
+    width: 57.5%;
+}
+#norm-kalkulator .error{
+    display: none;
+    background: #222;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 0 5px 0;
+}
+#norm-kalkulator .info{
+    color:red;
+}
+#norm-kalkulator .Rp,
+#norm-kalkulator .Ra{
+    width: 19.5%;
+    height: 126px;
+    background: #222;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 0 5px 0;
+}
+#norm-kalkulator .Rp{
+    width: 21.5%;
+}
+#norm-kalkulator .norm-end{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0 0;
+}
+#norm-kalkulator .szamol{
+    width: 57.5%;
+    background: #222;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 0 5px 0;
+}
+#norm-kalkulator .szamol #result{
+    width: 100%;
+    height: 40px;
+    color: #ddd;
+    font-size: 27px;
+    font-weight: 700;
+}
+#norm-kalkulator .szamol button {
+    display: block;
+    background: red;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    margin: 0 0 0 auto;
+    padding: 10px;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+}
+#norm-kalkulator .szamol span {
+    color: red;
+    font-size: 20px;
+}
+#norm-kalkulator .Rp div,
+#norm-kalkulator .Ra div{
+    font-size: 38px;
+    font-weight: 700;
+
+}
+
+
+.karrier{
+    margin: 50px 0;
+    padding: 0 10px;
+}
+.karrier > div{
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+}
+
+
+
+
+
+#olimpia-calendar{
+    text-align: center;
+    padding:50px 0;
+}
+#olimpia-calendar h2{
+    font-size: 70px;
+    font-weight: 800;
+    margin-top:0;
+}
+#olimpia-calendar > div{
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#olimpia-calendar div div{
+    background: white;
+    width: 23%;
+    color:#282828;
+    padding: 20px;
+    margin: 1%;
+    box-sizing: border-box;
+    min-height: 200px;
+}
+#olimpia-calendar h4{
+    font-size: 28px;
+    font-weight: 800;
+    margin: 10px 0 25px;
+}
+#olimpia-calendar p{
+    text-align: left;
+    color:black;
+    font-weight: 400;
+    margin: 0;
+}
+
+.poll-container{
+    background: rgb(17 17 17 / 78%);
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+    max-width: 500px;
+    margin: 0 auto 35px;
+    text-align: left;
+}
+.poll-container h3{
+    font-size: 18px;
+    opacity: 0.8;
+    margin: 15px 0;
+}
+.poll-container > div{
+    background: #222;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 0 5px 0;
+}
+.poll-container button {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    width: 100%;
+    background: #2c2c2c;
+    color: #666666;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    padding: 20px 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: 500ms ease-in-out;
+}
+.poll-container button.active{
+    background: red;
+    color: white;
+}
+
+.store{
+    padding: 50px 10px;
+}
+.store > div{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.store-list{
+    width: 65%;
+}
+.store ol{
+    font-size: 40px;
+    margin: 0;
+}
+.store li{
+    position: relative;
+    margin: 0 0 32px;
+}
+.store li img{
+    position: absolute; 
+    top:-16px; 
+    right: 0;
+}
+.store h3{
+    font-size: 40px;
+    margin: 0;
+}
+.store p{
+    color:#555;
+    font-size: 16px;
+}
+.store span{
+    color: red;
+    background: #FFF1F6;
+    border-radius: 50px;
+    padding: 3px 13px;
+    font-size: 12px !important;
+    font-weight: 600;
+}
+.store a {
+    border-bottom: 1px dashed;
+    color:red;
+    font-weight: 600;
+}
+.store a:after {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f14c';
+    margin-left: 7px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.edzok-filter{
+    background: #efefef;
+    padding: 100px 0 0;
+}
+.store-filter {
+    width: 30%;
+    background: #111;
+    color: #666666;
+    font-weight: 600;
+    padding: 20px;
+    margin: 0 0 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.store-filter .filter-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.store-filter .filter-icon label {
+    opacity: 1;
+}
+.store-filter .filter-icon i{
+    font-size: 30px;
+    cursor: pointer;
+}
+.store-filter .filter-icon i:hover{
+    color:#aaa;
+}
+.store-filter .filter-container {
+    display: none;
+    background: #222;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 5px 0;
+}
+.store-filter div div {
+    background: #2c2c2c;
+    color: #666666;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    margin: 5px 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+    text-align: center;
+}
+.store-filter div div.active {
+    background: red;
+    color: white;
+}
+.store label {
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+@media (max-width:500px){
+nav.menu{
+    display: none;
+}
+nav.mobil-menu{
+    display: block;
+    width: 100%;
+}
+.header {
+    min-height: auto;
+    padding: 70px 0 60px;
+}
+.header h1 {
+    font-size: 28px;
+    margin: 20px 0 0;
+}
+.header h2 {
+    font-size: 22px;
+}
+.kalkulator-choose {
+    max-width: 300px;
+}
+.fide-elo.kalkulator-choose .fide-norm-button,
+.fide-elo.kalkulator-choose .performance-button,
+.performance.kalkulator-choose .fide-norm-button,
+.performance.kalkulator-choose .fide-button{
+    font-size: 11px;
+}
+#kalkulator,
+#performance-kalkulator,
+#norm-kalkulator{
+    padding: 10px;
+}
+#eloForm > div:first-child > div {
+    width: 100%;
+}
+#eloForm #kFactorButtons button, #eloForm .resultButtons button {
+    font-size: 14px;
+}
+#kalkulator .szamol button,
+#performance-kalkulator .szamol button{
+    width: 35%;
+    margin: 0 0 0 auto;
+    display: block;
+}
+#performance-kalkulator .elo-input div {
+    height: 75px;
+    padding: 8px;
+}
+#performance-kalkulator .elo-input div input {
+    font-size: 27px;
+}
+#performance-kalkulator .elo-input div label {
+    font-size: 13px;
+}
+#performance-kalkulator .elo-input:nth-child(3) div {
+    height: 91px;
+}
+#norm-kalkulator .round-button button {
+    width: 50%;
+}
+#norm-kalkulator .norm-button button {
+    width: 23.7%;
+    font-size: 16px;
+}
+#norm-kalkulator #opponents > div {
+    margin: 10px 0;
+}
+#norm-kalkulator #opponents > div div:nth-child(1),
+#norm-kalkulator #opponents > div div:nth-child(2) {
+    width: 49.5%;
+}
+#norm-kalkulator #opponents > div div:nth-child(3) {
+    width: 100%;
+}
+#norm-kalkulator .Rp, #norm-kalkulator .Ra {
+    width: 49.5%;
+    height: 86px;
+}
+#norm-kalkulator .szamol {
+    width: 100%;
+}
+.chesscom > div,
+.lichess > div,
+.nyhchess-yt > div{
+    flex-direction: column-reverse;
+}
+.chesscom img,
+.lichess img,
+.nyhchess-yt img{
+    width: 100%;
+}
+.chesscom div div,
+.lichess div div,
+.nyhchess-yt div div{
+    width: 100%;
+    padding: 0 20px 20px;
+}
+.nyhchess-yt a {
+    font-size: 17px;
+}
+#partnerek h2,
+#stat h2,
+#ad h2,
+#videok h2,
+#fotok h2,
+#calendar h2,
+#csapat h2,
+#contact h2,
+.feluletek h2,
+.mukodes h2,
+.story h2,
+#tamogatas h2{
+    font-size: 28px;
+}
+#ad .ads div {
+    width: 100%;
+}
+.stat-number-yt,
+.stat-number-ig{
+    font-size: 40px;
+}
+.stat-text {
+    font-size: 16px;
+}
+.giganet-stat div {
+    width: 100%;
+    font-size: 40px;
+    margin: 0 0 36px;
+}
+#calendar div div {
+    width: 90%;
+}
+#csapat div div {
+    width: 39%;
+}
+.kuldetes p,
+.feluletek div div{
+    font-size: 16px !important;
+}
+.feluletek div div, .feluletek img {
+    width: 100%;
+}
+.edzok-card {
+    width: 95%;
+    padding: 20px;
+}
+.edzok-profil {
+    top: -60px;
+    left: 0;
+    width: 150px;
+}
+.edzok-rovid {
+    font-size: 13px;
+}
+.edzok-gomb a{
+    padding: 9px 18px;
+}
+#overlay .edzok-card {
+    width: 90%;
+    padding: 20px;
+}
+.email {
+    left: 0;
+    bottom: -30px;
+}
+.edzok-filter {
+    padding: 40px 0 0;
+}
+.edzok {
+    padding: 80px 0 0;
+}
+.store-filter{
+    width: 100%;
+}
+.store-list {
+    width: 100%;
+}
+.store ol {
+    font-size: 20px;
+}
+.store li img {
+    top: 41px;
+    right: 0;
+    width: 122px;
+}
+.detail-stat h3 {
+    font-size: 28px;
+}
+.tech-flex > div {
+    width: 100%;
+}
+.story p,
+.mukodes p{
+    font-size: 16px !important;
+    margin: 0 10px 20px;
+    padding: 0 20px;
+    border-left: 10px solid;
+    border-right:0;
+}
+#tamogatas p {
+    font-size: 16px;
+}
+.ranglista {
+    padding: 5px;
+}
+.top-buttons {
+    margin: 0;
+}
+.ranglista table,
+.top-buttons div{
+    font-size: 12px;
+}
+.ranglista tr {
+    padding: 4px;
+}
+.ranglista td:nth-child(2), .ranglista th:nth-child(2) {
+    width: 9%;
+}
+.ranglista td:nth-child(3), .ranglista th:nth-child(3) {
+    width: 34%;
+}
+.ranglista td:nth-child(4), .ranglista th:nth-child(4) {
+    width: 22%;
+}
+.nev,
+.tech-flex .nev,
+.yt-subs .nev{
+    width: 100%;
+    font-size: 16px;
+}
+.ertek,
+.tech-flex .ertek,
+.yt-subs .ertek {
+    margin-left: 5px;
+    color: #0D0D0D;
+}
+}
