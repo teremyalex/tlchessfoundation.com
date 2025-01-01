@@ -443,6 +443,12 @@
                                 <td><img src="https://ratings.fide.com/svg/CHN.svg"> Ding Liren</td>
                                 <td><img src="https://upload.wikimedia.org/wikipedia/fr/a/a5/Fide_logo.svg"> Ian Nepomniachtchi</td>
                             </tr>
+                            <tr>
+                                <td>2024</td>
+                                <td>Singapore</td>
+                                <td><img src="https://ratings.fide.com/svg/IND.svg"> Gukesh Dommaraju</td>
+                                <td><img src="https://ratings.fide.com/svg/CHN.svg"> Ding Liren</td>
+                            </tr>
 
                         </tbody>
                     </table>

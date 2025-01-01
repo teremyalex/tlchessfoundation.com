@@ -201,7 +201,7 @@
         oppCount++;
         let newOpp = `
             <div id="oppElo${oppCount}">
-                <label for="ratingB${oppCount}">Az ellenfeled Fide élő pontszáma</label>
+                <label for="ratingB${oppCount}">A(z) ${oppCount}. ellenfeled Fide élő pontszáma</label>
                 <input type="text" id="ratingB${oppCount}" name="ratingB${oppCount}" placeholder="0000" required>
                 <span class="side-result"></span>
             </div>

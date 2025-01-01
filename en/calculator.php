@@ -30,9 +30,9 @@
                             </div>
                             <div id="oppResult1" class="resultButtons">
                                 <label for="result">Match result</label>
-                                <button type="button" onclick="setResult(1, this)">Win</button>
-                                <button type="button" onclick="setResult(0.5, this)">Draw</button>
-                                <button type="button" onclick="setResult(0, this)">Loss</button>
+                                <button type="button" onclick="setResult(1, 1)">Win</button>
+                                <button type="button" onclick="setResult(0.5, 1)">Draw</button>
+                                <button type="button" onclick="setResult(0, 1)">Loss</button>
                                 <input type="hidden" id="gameResult1" name="gameResult" required>
                             </div>
                         </div>
@@ -121,6 +121,14 @@
 <section style="background: red; height: 10px;"></section>
 
 <script>
+    //localStorage beöltés
+    document.getElementById('ratingA').value = localStorage.getItem('ratingA') || "";
+    document.getElementById('kFactor').value = localStorage.getItem('kFactor') || "";
+    document.querySelectorAll('#kFactorButtons button').forEach(item => {
+        item.textContent == document.getElementById('kFactor').value ? item.classList.add('active') : null;
+    })
+    
+    
     function setKFactor(value) {
         document.getElementById('kFactor').value = value;
     }
@@ -128,20 +136,21 @@
     let oppCount = 1;
     let globalIndex = 1;
 
-    function setResult(value, elem) {
-        // Find the hidden input field within the parent element
-        const gameResultInput = elem.parentElement.querySelector('input[type="hidden"]');
-        gameResultInput.value = value;
+    function setResult(value, index) {
+        document.getElementById('gameResult' + index).value = value;
+    }
+    
+    function alertCheck(){
+        
     }
 
     function calculateElo() {
         removeAlert();
         document.querySelector('.alert').innerHTML = "";
-        document.getElementById('result').innerHTML = "";
         document.querySelectorAll('.side-result').forEach(element => element.innerHTML = "");
         let totalratingChange = 0;
-        const ratingA = parseFloat(document.getElementById('ratingA').value);
-        const kFactor = parseFloat(document.getElementById('kFactor').value);
+        let ratingA = parseFloat(document.getElementById('ratingA').value);
+        let kFactor = parseFloat(document.getElementById('kFactor').value);
         for(let i=1; i<=oppCount;i++){  
             globalIndex = i;
             const ratingB = parseFloat(document.getElementById('ratingB' + i).value);
@@ -150,25 +159,25 @@
             if (isNaN(ratingA) || ratingA < 1400 || ratingA > 3000) {
                 document.querySelector('.alert').innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i>Please provide your FIDE Elo rating between 1400 and 3000.`;
                 document.getElementById('ratingA').parentElement.classList.add('active');
-                return;
+                return
             } else if(isNaN(kFactor)) {
                 document.querySelector('.alert').innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i>Please provide the value of the multiplier (K factor).`;
                 document.getElementById('kFactor').parentElement.classList.add('active');
-                return;
+                return
             } else if (isNaN(ratingB) || ratingB < 1400 || ratingB > 3000) {
                 document.querySelector('.alert').innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i>Please provide the FIDE Elo rating of your ${i}th opponent between 1400 and 3000.`;
                 document.getElementById('ratingB' + i).parentElement.classList.add('active');
                 document.querySelectorAll('.side-result').forEach(element => element.innerHTML = "");
-                return;
+                return
             } else if(isNaN(gameResult)) {
                 document.querySelector('.alert').innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i>Please provide the result of the ${i}th game.`;
                 document.getElementById('gameResult' + i).parentElement.classList.add('active');
                 document.querySelectorAll('.side-result').forEach(element => element.innerHTML = "");
-                return;
+                return
             }
-            const expectedScoreA = 1 / (1 + Math.pow(10, (ratingB - ratingA) / 400));
-            const newRatingA = ratingA + kFactor * (gameResult - expectedScoreA);
-            const ratingChange = newRatingA - ratingA;
+            let expectedScoreA = 1 / (1 + Math.pow(10, (ratingB - ratingA) / 400));
+            let newRatingA = ratingA + kFactor * (gameResult - expectedScoreA);
+            let ratingChange = newRatingA - ratingA;
             totalratingChange += ratingChange;
             console.log(newRatingA, ratingChange);
             
@@ -179,6 +188,8 @@
         let finalRating = ratingA + totalratingChange;
 
          document.getElementById('result').innerHTML = `${finalRating.toFixed(1)} <span>${totalratingChange >= 0 ? '+' : ''}${totalratingChange.toFixed(1)}</span>`;
+        
+        saveData();
     }
     
     
@@ -187,15 +198,15 @@
         oppCount++;
         let newOpp = `
             <div id="oppElo${oppCount}">
-                <label for="ratingB${oppCount}">Your opponent's FIDE Elo rating</label>
+                <label for="ratingB${oppCount}">Your ${oppCount}th opponent's FIDE Elo rating</label>
                 <input type="text" id="ratingB${oppCount}" name="ratingB${oppCount}" placeholder="0000" required>
                 <span class="side-result"></span>
             </div>
             <div id="oppResult${oppCount}" class="resultButtons">
                 <label for="result">Match result</label>
-                <button type="button" onclick="setResult(1, this)">Win</button>
-                <button type="button" onclick="setResult(0.5, this)">Draw</button>
-                <button type="button" onclick="setResult(0, this)">Loss</button>
+                <button type="button" onclick="setResult(1, ${oppCount})">Win</button>
+                <button type="button" onclick="setResult(0.5, ${oppCount})">Draw</button>
+                <button type="button" onclick="setResult(0, ${oppCount})">Loss</button>
                 <input type="hidden" id="gameResult${oppCount}" name="gameResult${oppCount}" required>
             </div> 
         `;
@@ -203,7 +214,6 @@
         let container = document.createElement('div');
         container.innerHTML = newOpp;
 
-        // Add all child elements of the container to the target element
         let targetDiv = document.querySelector('#eloForm div');
         while (container.firstChild) {
             targetDiv.appendChild(container.firstChild);
@@ -265,15 +275,17 @@
 		document.getElementById('ratingB1').value = myElo;
 	}
     
-    
-</script>
-<script>
     document.getElementById('utmutato').addEventListener('click', function(){
         document.getElementById('utmutato-text').classList.toggle('active');
         document.getElementById('utmutato').textContent = document.getElementById('utmutato').textContent === "Guide" ? "Close" : "Guide";
-
-        console.log(document.getElementById('utmutato').textContent);
     });
+    
+    function saveData(){
+        localStorage.setItem('ratingA', document.getElementById('ratingA').value);
+        localStorage.setItem('kFactor', document.getElementById('kFactor').value);
+    }
+    
+    
 </script>
 <script>
 	// Adatok betöltése a helyi JSON fájlból
