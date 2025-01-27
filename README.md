@@ -1,1 +1,1 @@
-https://tlchessfoundation.hu
+https://tlchessfoundation.com
